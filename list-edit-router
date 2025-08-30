@@ -20,7 +20,7 @@ router.post("/tasks", (req, res) => {
 
 router.delete("/tasks/:id", (req, res) => {
     const id = parseInt(req.params.id);
-    const tasks = tasks.filter(t => t.id !== id);
+    tasks = tasks.filter(t => t.id !== id);
     res.json({message: "Task deleted"});
 });
 
@@ -36,4 +36,4 @@ router.put("/task/:id", (req, res) => {
     res.json(task);
 });
 
-module.exports = router;
+module.exports = router;    

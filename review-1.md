@@ -8,10 +8,13 @@ Está pensado para quienes necesitan una herramienta ligera y práctica que les 
 # ¿Cuáles son las funcionalidades más importantes y por qué los usuarios las usarían?  
 
 - **Crear tareas**: permite a los usuarios registrar actividades que no quieren olvidar.  
-- **Consultar tareas**: los usuarios pueden ver todas las tareas disponibles o buscar una en particular.  
-- **Actualizar tareas**: si cambia la información de una tarea, puede editarse fácilmente.  
+![alt text](images\image2.png)
+- **Consultar tareas**: los usuarios pueden ver todas las tareas disponibles o buscar una en particular.
+![alt text](images\image1.png)
+- **Actualizar tareas**: si cambia la información de una tarea, puede editarse fácilmente.
+![alt text](images\image3.png)
 - **Eliminar tareas**: cuando una actividad ya no es necesaria, se puede quitar de la lista.  
-
+![alt text](images\image4.png)
 Estas funcionalidades son claves porque ayudan a los usuarios a **ahorrar tiempo, mantenerse organizados y priorizar mejor sus responsabilidades**.  
 
 ---
