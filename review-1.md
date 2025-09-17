@@ -9,12 +9,30 @@ Está pensado para quienes necesitan una herramienta ligera y práctica que les 
 
 - **Crear tareas**: permite a los usuarios registrar actividades que no quieren olvidar.  
 ![alt text](images\image2.png)
+
+Si se escribe con body vacio, muestra
+![alt text](images\image7.png)
+
 - **Consultar tareas**: los usuarios pueden ver todas las tareas disponibles o buscar una en particular.
 ![alt text](images\image1.png)
+
+Si se escribe un valor inexistente, muestra
+![alt text](images\image5.png)
+
+![alt text](images\image6.png)
+
 - **Actualizar tareas**: si cambia la información de una tarea, puede editarse fácilmente.
 ![alt text](images\image3.png)
+
+Si se escribe con body vacio, muestra
+![alt text](images\image8.png)
+
 - **Eliminar tareas**: cuando una actividad ya no es necesaria, se puede quitar de la lista.  
 ![alt text](images\image4.png)
+
+Si se escribe un valor inexistente, muestra
+![alt text](images\image9.png)
+
 Estas funcionalidades son claves porque ayudan a los usuarios a **ahorrar tiempo, mantenerse organizados y priorizar mejor sus responsabilidades**.  
 
 ---

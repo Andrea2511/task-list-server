@@ -7,6 +7,20 @@ let tasks = [
     { id: 3, isCompleted: true, description: "Buy groceries" },
 ];
 
+router.param("id", (req, res, next, id) => {
+  if (isNaN(id)) {
+    return res.status(400).json({ error: "ID must be a number" });
+  }
+  next();
+});
+
+router.param("status", (req, res, next, status) => {
+  if (status !== "completed" && status !== "pending") {
+    return res.status(400).json({ error: "Invalid status value" });
+  }
+  next();
+});
+
 router.get("/task", (req, res) =>{
     res.json(tasks);
 });

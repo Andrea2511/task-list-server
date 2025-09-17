@@ -7,6 +7,23 @@ let tasks = [
     { id: 3, isCompleted: true, description: "Buy groceries" },
 ];
 
+router.use((req, res, next) => {
+  if ((req.method === "POST" || req.method === "PUT")) {
+    if (!req.body || Object.keys(req.body).length === 0) {
+      return res.status(400).json({ error: "Body is required" });
+    }
+
+    const { description, isCompleted } = req.body;
+    if (typeof description !== "string" || description.trim() === "") {
+      return res.status(400).json({ error: "Description is required and must be a string" });
+    }
+    if (isCompleted !== undefined && typeof isCompleted !== "boolean") {
+      return res.status(400).json({ error: "isCompleted must be a boolean" });
+    }
+  }
+  next();
+});
+
 router.post("/tasks", (req, res) => {
     const {description, isCompleted} = req.body;
     const newTask = {
@@ -20,8 +37,14 @@ router.post("/tasks", (req, res) => {
 
 router.delete("/tasks/:id", (req, res) => {
     const id = parseInt(req.params.id);
-    tasks = tasks.filter(t => t.id !== id);
-    res.json({message: "Task deleted"});
+    const taskIndex = tasks.findIndex(t => t.id === id);
+
+    if (taskIndex === -1) {
+        return res.status(404).json({ message: "Task not found" });
+    }
+
+    tasks.splice(taskIndex, 1);
+    res.json({ message: "Task deleted successfully" });
 });
 
 router.put("/task/:id", (req, res) => {
